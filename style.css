@@ -17,7 +17,6 @@ body {
   color: #0d6efd !important;
 }
 
-
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -120,16 +119,6 @@ body {
   background-color: #dc3545;
 }
 
-.form-control:invalid,
-.form-select:invalid {
-  border-color: #dc3545;
-}
-
-.form-label::after {
-  content: " *";
-  color: red;
-}
-
 .required {
   color: red;
   font-weight: bold;
@@ -139,7 +128,6 @@ body {
   color: red;
   font-size: 14px;
 }
-
 
 .invalid-feedback {
   display: none;

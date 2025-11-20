@@ -21,22 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const phone = document.getElementById("phone");
     const phoneRegex = /^[6-9]\d{9}$/;
-
-    if (phone.value.trim() && !phoneRegex.test(phone.value.trim())) {
+    const phoneVal = phone.value.trim();
+    if (phoneVal && !phoneRegex.test(phoneVal)) {
       phone.classList.add("is-invalid");
       isValid = false;
-    } else {
-      phone.classList.remove("is-invalid");
     }
 
     const email = document.getElementById("email");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+    const emailVal = email.value.trim();
+    if (emailVal && !emailRegex.test(emailVal)) {
       email.classList.add("is-invalid");
       isValid = false;
-    } else {
-      email.classList.remove("is-invalid");
     }
 
     const agree = document.getElementById("agree");
@@ -44,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!agree.checked) {
       agreeError.style.display = "block";
+      alert("Please check the checkbox.");
       isValid = false;
     } else {
       agreeError.style.display = "none";

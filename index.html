@@ -90,7 +90,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row justify-content-center">
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Data Science"
                     style="height: 200px; object-fit: cover;">
@@ -101,7 +101,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Economics + Data Science"
                     style="height: 200px; object-fit: cover;">
@@ -112,7 +112,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Business Management"
                     style="height: 200px; object-fit: cover;">
@@ -127,7 +127,7 @@
           </div>
           <div class="carousel-item">
             <div class="row justify-content-center">
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Economics"
                     style="height: 200px; object-fit: cover;">
@@ -138,7 +138,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Another Course"
                     style="height: 200px; object-fit: cover;">
@@ -149,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-12 col-md-4 mb-3">
                 <div class="card course-card shadow-sm h-100">
                   <img src="./assets/checker.png" class="card-img-top" alt="Yet Another Course"
                     style="height: 200px; object-fit: cover;">
@@ -179,7 +179,7 @@
             <h2 class="text-center fw-bold mb-4">Register Your Interest</h2>
             <form id="interestForm" novalidate>
               <div class="mb-3">
-                <label class="form-label">I am enquiring as </label>
+                <label class="form-label">I am enquiring as <span class="required">*</span></label>
                 <select class="form-select" id="enquiry" required>
                   <option value="">Please select</option>
                   <option>Parent</option>
@@ -190,7 +190,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Grade </label>
+                  <label class="form-label">Grade <span class="required">*</span></label>
                   <select class="form-select" id="grade" required>
                     <option value="">Please select</option>
                     <option>10th</option>
@@ -200,7 +200,7 @@
                   <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Board </label>
+                  <label class="form-label">Board <span class="required">*</span></label>
                   <select class="form-select" id="board" required>
                     <option value="">Please select</option>
                     <option>CBSE</option>
@@ -212,19 +212,19 @@
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">First Name </label>
+                  <label class="form-label">First Name <span class="required">*</span></label>
                   <input type="text" class="form-control" id="fname" required>
                   <div class="invalid-feedback">First name is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Surname </label>
+                  <label class="form-label">Surname <span class="required">*</span></label>
                   <input type="text" class="form-control" id="lname" required>
                   <div class="invalid-feedback">Surname is required.</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Country </label>
+                  <label class="form-label">Country <span class="required">*</span></label>
                   <select class="form-select" id="country" required>
                     <option value="">Please select</option>
                     <option>India</option>
@@ -234,29 +234,30 @@
                   <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">City </label>
+                  <label class="form-label">City <span class="required">*</span></label>
                   <input type="text" class="form-control" id="city" required>
                   <div class="invalid-feedback">City is required.</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Phone </label>
+                  <label class="form-label">Phone <span class="required">*</span></label>
                   <input type="tel" class="form-control" id="phone" maxlength="10" placeholder="9876543210" required>
                   <div class="invalid-feedback">Phone must be 10 digits starting with 6-9.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Email </label>
+                  <label class="form-label">Email <span class="required">*</span></label>
                   <input type="email" class="form-control" id="email" required>
                   <div class="invalid-feedback">Please enter a valid email.</div>
                 </div>
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="agree" required>
-                <label class="form-check-label" for="agree">I agree to the terms. Lorem ipsum dolor sit amet.</label>
-                <div id="agreeError" class="invalid-feedback">You must agree to the terms.</div>
+                <label class="form-check-label" for="agree">I agree to the terms. Lorem ipsum dolor sit amet. <span
+                    class="required">*</span></label>
+                <div class="invalid-feedback d-block" id="agreeError" style="display: none;">Please check the checkbox.
+                </div>
               </div>
-
               <button type="submit" class="btn btn-danger w-100 btn-lg">Submit</button>
             </form>
           </div>
