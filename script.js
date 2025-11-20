@@ -6,8 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isValid = true;
 
-    const requiredFields = form.querySelectorAll("[required]");
-    requiredFields.forEach((field) => {
+    const fields = form.querySelectorAll(
+      "input[required]:not(#agree), select[required]"
+    );
+
+    fields.forEach((field) => {
       if (!field.value.trim()) {
         field.classList.add("is-invalid");
         isValid = false;
@@ -16,37 +19,39 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const phone = document.getElementById("phone").value.trim();
+    const phone = document.getElementById("phone");
     const phoneRegex = /^[6-9]\d{9}$/;
-    if (phone && !phoneRegex.test(phone)) {
-      document.getElementById("phone").classList.add("is-invalid");
+
+    if (phone.value.trim() && !phoneRegex.test(phone.value.trim())) {
+      phone.classList.add("is-invalid");
       isValid = false;
     } else {
-      document.getElementById("phone").classList.remove("is-invalid");
+      phone.classList.remove("is-invalid");
     }
 
-    const email = document.getElementById("email").value.trim();
+    const email = document.getElementById("email");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email && !emailRegex.test(email)) {
-      document.getElementById("email").classList.add("is-invalid");
+
+    if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+      email.classList.add("is-invalid");
       isValid = false;
     } else {
-      document.getElementById("email").classList.remove("is-invalid");
+      email.classList.remove("is-invalid");
     }
 
     const agree = document.getElementById("agree");
+    const agreeError = document.getElementById("agreeError");
+
     if (!agree.checked) {
-      agree.classList.add("is-invalid");
+      agreeError.style.display = "block";
       isValid = false;
     } else {
-      agree.classList.remove("is-invalid");
+      agreeError.style.display = "none";
     }
 
     if (isValid) {
-      alert("Form submitted successfully! Thanks for your interest.");
+      alert("Form submitted successfully!");
       form.reset();
-    } else {
-      alert("Please fix errors before submitting.");
     }
   });
 
@@ -55,5 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", function () {
       this.classList.remove("is-invalid");
     });
+  });
+
+  const agree = document.getElementById("agree");
+  const agreeError = document.getElementById("agreeError");
+
+  agree.addEventListener("change", function () {
+    agreeError.style.display = "none";
   });
 });

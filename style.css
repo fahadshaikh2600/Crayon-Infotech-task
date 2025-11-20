@@ -17,6 +17,7 @@ body {
   color: #0d6efd !important;
 }
 
+
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -99,10 +100,11 @@ body {
 
 .carousel-indicators {
   position: static;
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   padding-left: 0;
+  margin-bottom: 1rem;
 }
 
 .carousel-indicators button {
@@ -123,7 +125,27 @@ body {
   border-color: #dc3545;
 }
 
+.form-label::after {
+  content: " *";
+  color: red;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+
 .invalid-feedback {
+  display: none;
+}
+
+.is-invalid~.invalid-feedback {
   display: block;
 }
 

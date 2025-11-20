@@ -179,7 +179,7 @@
             <h2 class="text-center fw-bold mb-4">Register Your Interest</h2>
             <form id="interestForm" novalidate>
               <div class="mb-3">
-                <label class="form-label">I am enquiring as *</label>
+                <label class="form-label">I am enquiring as </label>
                 <select class="form-select" id="enquiry" required>
                   <option value="">Please select</option>
                   <option>Parent</option>
@@ -190,7 +190,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Grade *</label>
+                  <label class="form-label">Grade </label>
                   <select class="form-select" id="grade" required>
                     <option value="">Please select</option>
                     <option>10th</option>
@@ -200,7 +200,7 @@
                   <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Board *</label>
+                  <label class="form-label">Board </label>
                   <select class="form-select" id="board" required>
                     <option value="">Please select</option>
                     <option>CBSE</option>
@@ -212,19 +212,19 @@
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">First Name *</label>
+                  <label class="form-label">First Name </label>
                   <input type="text" class="form-control" id="fname" required>
                   <div class="invalid-feedback">First name is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Surname *</label>
+                  <label class="form-label">Surname </label>
                   <input type="text" class="form-control" id="lname" required>
                   <div class="invalid-feedback">Surname is required.</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Country *</label>
+                  <label class="form-label">Country </label>
                   <select class="form-select" id="country" required>
                     <option value="">Please select</option>
                     <option>India</option>
@@ -234,19 +234,19 @@
                   <div class="invalid-feedback">This field is required.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">City *</label>
+                  <label class="form-label">City </label>
                   <input type="text" class="form-control" id="city" required>
                   <div class="invalid-feedback">City is required.</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Phone *</label>
+                  <label class="form-label">Phone </label>
                   <input type="tel" class="form-control" id="phone" maxlength="10" placeholder="9876543210" required>
                   <div class="invalid-feedback">Phone must be 10 digits starting with 6-9.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label class="form-label">Email *</label>
+                  <label class="form-label">Email </label>
                   <input type="email" class="form-control" id="email" required>
                   <div class="invalid-feedback">Please enter a valid email.</div>
                 </div>
@@ -254,8 +254,9 @@
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="agree" required>
                 <label class="form-check-label" for="agree">I agree to the terms. Lorem ipsum dolor sit amet.</label>
-                <div class="invalid-feedback">You must agree to the terms.</div>
+                <div id="agreeError" class="invalid-feedback">You must agree to the terms.</div>
               </div>
+
               <button type="submit" class="btn btn-danger w-100 btn-lg">Submit</button>
             </form>
           </div>
